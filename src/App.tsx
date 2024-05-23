@@ -2,9 +2,10 @@ import Box from "@mui/material/Box";
 import Container from "@mui/material/Container";
 function App() {
   return (
-    <>
-      <h1>Travel</h1>
-    </>
+    <Container maxWidth="lg">
+      <Box sx={{ bgcolor: "#f7f7f7", height: "100vh" }}>
+      </Box>
+    </Container>
   );
 }
 
