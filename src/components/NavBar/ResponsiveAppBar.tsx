@@ -1,4 +1,7 @@
 import * as React from "react";
+
+import "./ResponsiveAppBar.css";
+
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -41,13 +44,12 @@ function ResponsiveAppBar() {
               mr: 2,
               display: { xs: "none", md: "flex" },
               fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            <img src="./img/TRAVELFY.png" alt="logo" />
+            <span className="logo-travel">TR𝝠VEL</span>
+            <span className="logo-fly">LONDON</span>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -98,13 +100,12 @@ function ResponsiveAppBar() {
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
               fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
               color: "inherit",
               textDecoration: "none",
             }}
           >
-            <img src="./img/TRAVELFY.png" alt="logo" />
+            <span className="logo-travel">TR𝝠VEL</span>
+            <span className="logo-fly">FLY</span>
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
@@ -113,7 +114,8 @@ function ResponsiveAppBar() {
                 onClick={handleCloseNavMenu}
                 sx={{
                   my: 2,
-                  paddingLeft: 10,
+                  marginLeft: 13,
+                  fontWeight: 500,
                   color: "black",
                   display: "block",
                 }}
