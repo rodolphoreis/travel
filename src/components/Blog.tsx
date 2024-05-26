@@ -2,7 +2,6 @@ import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
 import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedinIcon from "@mui/icons-material/Linkedin";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Header from "./Header";
@@ -87,11 +86,6 @@ const sidebar = {
       name: "GitHub",
       icon: GitHubIcon,
       url: "https://github.com/rodolphoreis",
-    },
-    {
-      name: "Linkedin",
-      icon: LinkedinIcon,
-      url: "https://www.linkedin.com/in/rodolphoreis/",
     },
   ],
 };
