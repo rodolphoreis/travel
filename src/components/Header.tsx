@@ -1,8 +1,6 @@
 import * as React from "react";
 import Toolbar from "@mui/material/Toolbar";
-import Button from "@mui/material/Button";
-import IconButton from "@mui/material/IconButton";
-import SearchIcon from "@mui/icons-material/Search";
+
 import Typography from "@mui/material/Typography";
 import Link from "@mui/material/Link";
 
@@ -22,7 +20,7 @@ export default function Header(props: HeaderProps) {
       <Toolbar sx={{ borderBottom: 1, borderColor: "divider" }}>
         <Typography
           component="h2"
-          variant="h5"
+          variant="h2"
           color="inherit"
           align="center"
           noWrap
@@ -30,12 +28,6 @@ export default function Header(props: HeaderProps) {
         >
           {title}
         </Typography>
-        <IconButton>
-          <SearchIcon />
-        </IconButton>
-        <Button variant="outlined" size="small">
-          Sign up
-        </Button>
       </Toolbar>
       <Toolbar
         component="nav"
