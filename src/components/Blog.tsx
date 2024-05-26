@@ -1,7 +1,6 @@
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-import GitHubIcon from "@mui/icons-material/GitHub";
 
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Header from "./Header";
@@ -81,13 +80,6 @@ const sidebar = {
   description:
     "London is in Europe, but its money is different from other countries, there is the Pound Sterling. There all things are more expensive than Portugal, in London there is a king, his name is Charles III, he is the son of Queen Elizabeth II, queen of England between the years 1952 and 2022.",
   free: [{ title: "British Museum", url: "https://www.britishmuseum.org/" }],
-  social: [
-    {
-      name: "GitHub",
-      icon: GitHubIcon,
-      url: "https://github.com/rodolphoreis",
-    },
-  ],
 };
 
 const defaultTheme = createTheme();
@@ -111,7 +103,6 @@ export default function Blog() {
               title={sidebar.title}
               description={sidebar.description}
               archives={sidebar.free}
-              social={sidebar.social}
             />
           </Grid>
         </main>
