@@ -1,13 +1,12 @@
 import CssBaseline from "@mui/material/CssBaseline";
 import Grid from "@mui/material/Grid";
 import Container from "@mui/material/Container";
-
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Header from "./Header";
-import MainFeaturedPost from "./MainFeaturedPost";
 import FeaturedPost from "./FeaturedPost";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
+import Carossel from "./Carossel";
 
 const sections = [
   { title: "Transport", url: "https://tfl.gov.uk/modes/tube/" },
@@ -24,17 +23,6 @@ const sections = [
   { title: "Premier League", url: "https://www.premierleague.com/" },
   { title: "Science Museum", url: "https://www.sciencemuseum.org.uk/home" },
 ];
-
-const mainFeaturedPost = {
-  title: "London",
-  date: "",
-  description:
-    "For start the plan of visit London, you need to study many plances and plan your trip,  you see what more like, because in my opinion there are many beautiful places and differents.",
-  image:
-    "https://cdn-lnp.dataweavers.io/-/media/images/london/visit/ecommerce-and-advertising/ecommerce/london-skyline-night-hero.jpg?rev=a20bd6bfc51c445ea757f00304015760&mw=1920&hash=ED7739492B10435D82A63CF2CF39D882",
-  imageText: "main image description",
-  linkText: "",
-};
 
 const featuredPosts = [
   {
@@ -92,7 +80,7 @@ export default function Blog() {
         <Header title="London" sections={sections} />
 
         <main>
-          <MainFeaturedPost post={mainFeaturedPost} />
+          <Carossel />
           <Grid container spacing={4}>
             {featuredPosts.map((post) => (
               <FeaturedPost key={post.title} post={post} />
