@@ -23,11 +23,13 @@ const items = [
 
 function Carossel() {
   return (
-    <Carousel>
-      {items.map((item, i) => (
-        <Item key={i} item={item} />
-      ))}
-    </Carousel>
+    <div style={{ minHeight: "400px" }}>
+      <Carousel>
+        {items.map((item, i) => (
+          <Item key={i} item={item} />
+        ))}
+      </Carousel>
+    </div>
   );
 }
 
@@ -39,7 +41,7 @@ function Item(props: any) {
         alt={props.item.name}
         style={{
           width: "100%",
-          height: "100%",
+          height: "auto",
           borderRadius: "5px",
         }}
       />
