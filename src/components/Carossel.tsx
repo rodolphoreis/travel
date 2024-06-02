@@ -2,7 +2,8 @@ import Carousel from "react-material-ui-carousel";
 
 const items = [
   {
-    image: "./big.jpeg",
+    image:
+      "https://images.pexels.com/photos/427679/pexels-photo-427679.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
   },
   {
     image: "./garden.jpeg",
@@ -25,9 +26,10 @@ function Carossel() {
   return (
     <div style={{ minHeight: "400px" }}>
       <Carousel>
-        {items.map((item, i) => (
-          <Item key={i} item={item} />
-        ))}
+        {items.map((item, i) => {
+          console.log({ item: item });
+          return <Item key={i} item={item} />;
+        })}
       </Carousel>
     </div>
   );
