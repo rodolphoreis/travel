@@ -7,7 +7,7 @@ import Link from "@mui/material/Link";
 interface HeaderProps {
   sections: ReadonlyArray<{
     title: string;
-    url: string;
+    items: { title: string; url: string }[];
   }>;
   title: string;
 }
