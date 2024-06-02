@@ -9,19 +9,24 @@ import Footer from "./Footer";
 import Carossel from "./Carossel";
 
 const sections = [
-  { title: "Transport", url: "https://tfl.gov.uk/modes/tube/" },
-  { title: "Sky Garden", url: "https://skygarden.london/" },
-  { title: "Five Guys", url: "https://fiveguys.co.uk/" },
   {
-    title: "London Tickets",
-    url: "https://www.london-tickets.co.uk/?gad_source=1&gclid=Cj0KCQjwu8uyBhC6ARIsAKwBGpQlR5vDEzBhNJdx2HCrpmnXNOJ-faqg2gTyyMzmzC2d8aAq5NUaETwaAuFLEALw_wcB",
+    title: "Transport",
+    items: [
+      { title: "Transporte de dentro", url: "https://tfl.gov.uk/modes/tube/" },
+    ],
   },
-  {
-    title: "Buckingham Palace",
-    url: "https://www.rct.uk/visit/buckingham-palace",
-  },
-  { title: "Premier League", url: "https://www.premierleague.com/" },
-  { title: "Science Museum", url: "https://www.sciencemuseum.org.uk/home" },
+  // { title: "Sky Garden", url: "https://skygarden.london/" },
+  // { title: "Five Guys", url: "https://fiveguys.co.uk/" },
+  // {
+  //   title: "London Tickets",
+  //   url: "https://www.london-tickets.co.uk/?gad_source=1&gclid=Cj0KCQjwu8uyBhC6ARIsAKwBGpQlR5vDEzBhNJdx2HCrpmnXNOJ-faqg2gTyyMzmzC2d8aAq5NUaETwaAuFLEALw_wcB",
+  // },
+  // {
+  //   title: "Buckingham Palace",
+  //   url: "https://www.rct.uk/visit/buckingham-palace",
+  // },
+  // { title: "Premier League", url: "https://www.premierleague.com/" },
+  // { title: "Science Museum", url: "https://www.sciencemuseum.org.uk/home" },
 ];
 
 const featuredPosts = [
