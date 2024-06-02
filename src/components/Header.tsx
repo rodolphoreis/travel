@@ -1,19 +1,27 @@
 import * as React from "react";
-import Toolbar from "@mui/material/Toolbar";
 
+import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
-import Link from "@mui/material/Link";
+import { Button, Menu, MenuItem } from "@mui/material";
 
 interface HeaderProps {
   sections: ReadonlyArray<{
     title: string;
-    url: string;
+    items: { title: string; url: string }[];
   }>;
   title: string;
 }
 
 export default function Header(props: HeaderProps) {
   const { sections, title } = props;
+  const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
 
   return (
     <React.Fragment>
@@ -34,17 +42,41 @@ export default function Header(props: HeaderProps) {
         variant="dense"
         sx={{ justifyContent: "space-between", overflowX: "auto" }}
       >
-        {sections.map((section) => (
-          <Link
-            color="inherit"
-            noWrap
-            key={section.title}
-            variant="body2"
-            href={section.url}
-            sx={{ p: 1, flexShrink: 0 }}
-          >
-            {section.title}
-          </Link>
+        {sections.map((section, index) => (
+          <>
+            <Button
+              color="inherit"
+              key={index}
+              variant="contained"
+              sx={{ p: 1, flexShrink: 0 }}
+              onClick={handleClick}
+              aria-controls={open ? "basic-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? "true" : undefined}
+            >
+              {section.title}
+            </Button>
+            <Menu
+              open={open}
+              anchorEl={anchorEl}
+              onClose={handleClose}
+              MenuListProps={{
+                "aria-labelledby": "basic-button",
+              }}
+            >
+              {section.items.map((item, index) => (
+                <MenuItem
+                  key={index}
+                  onClick={() => {
+                    handleClose();
+                    location.href = item.url;
+                  }}
+                >
+                  {item.title}
+                </MenuItem>
+              ))}
+            </Menu>
+          </>
         ))}
       </Toolbar>
     </React.Fragment>
