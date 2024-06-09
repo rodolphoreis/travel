@@ -48,9 +48,17 @@ export default function Header(props: HeaderProps) {
               color="inherit"
               key={index}
               variant="contained"
-              sx={{ p: 1, flexShrink: 0 }}
-              onClick={handleClick}
-              aria-controls={open ? "basic-menu" : undefined}
+              sx={{
+                p: 1,
+                marginTop: "20px",
+                marginBottom: "20px",
+                fontSize: "13px",
+                padding: "5px 13px",
+                flexShrink: 0,
+              }}
+              onClick={(event) => handleClick(event, index)}
+              aria-controls={
+                activeSectionIndex === index ? "basic-menu" : undefined
               aria-haspopup="true"
               aria-expanded={open ? "true" : undefined}
             >
