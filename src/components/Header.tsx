@@ -65,27 +65,30 @@ export default function Header(props: HeaderProps) {
             >
               {section.title}
             </Button>
-            <Menu
-              open={open}
-              anchorEl={anchorEl}
-              onClose={handleClose}
-              MenuListProps={{
-                "aria-labelledby": "basic-button",
-              }}
-            >
-              {section.items.map((item, index) => (
-                <MenuItem
-                  key={index}
-                  onClick={() => {
-                    handleClose();
-                    location.href = item.url;
-                  }}
-                >
-                  {item.title}
-                </MenuItem>
-              ))}
-            </Menu>
-          </>
+            {activeSectionIndex === index && (
+              <Menu
+                id="basic-menu"
+                anchorEl={anchorEl}
+                open={Boolean(anchorEl)}
+                onClose={handleClose}
+                MenuListProps={{
+                  "aria-labelledby": "basic-button",
+                }}
+              >
+                {section.items.map((item, itemIndex) => (
+                  <MenuItem
+                    key={itemIndex}
+                    onClick={() => {
+                      handleClose();
+                      location.href = item.url;
+                    }}
+                  >
+                    {item.title}
+                  </MenuItem>
+                ))}
+              </Menu>
+            )}
+          </React.Fragment>
         ))}
       </Toolbar>
     </React.Fragment>
