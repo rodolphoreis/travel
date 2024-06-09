@@ -165,6 +165,7 @@ export default function Blog() {
               <FeaturedPost key={post.title} post={post} />
             ))}
           </Grid>
+
           <Sidebar
             title={sidebar.title}
             description={sidebar.description}
