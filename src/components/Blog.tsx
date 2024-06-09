@@ -165,13 +165,11 @@ export default function Blog() {
               <FeaturedPost key={post.title} post={post} />
             ))}
           </Grid>
-          <Grid container spacing={0} sx={{ mt: 3 }}>
-            <Sidebar
-              title={sidebar.title}
-              description={sidebar.description}
-              archives={sidebar.free}
-            />
-          </Grid>
+          <Sidebar
+            title={sidebar.title}
+            description={sidebar.description}
+            archives={sidebar.free}
+          />
         </main>
       </Container>
       <Footer
