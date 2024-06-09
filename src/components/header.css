@@ -1,5 +1,6 @@
 @media (max-width: 500px) {
   nav {
     gap: 10px;
+    margin-left: 0px;
   }
 }
