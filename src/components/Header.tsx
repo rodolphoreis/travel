@@ -43,7 +43,7 @@ export default function Header(props: HeaderProps) {
         sx={{ justifyContent: "space-between", overflowX: "auto" }}
       >
         {sections.map((section, index) => (
-          <>
+          <React.Fragment key={index}>
             <Button
               color="inherit"
               key={index}
