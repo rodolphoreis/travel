@@ -59,8 +59,9 @@ export default function Header(props: HeaderProps) {
               onClick={(event) => handleClick(event, index)}
               aria-controls={
                 activeSectionIndex === index ? "basic-menu" : undefined
+              }
               aria-haspopup="true"
-              aria-expanded={open ? "true" : undefined}
+              aria-expanded={activeSectionIndex === index ? "true" : undefined}
             >
               {section.title}
             </Button>
