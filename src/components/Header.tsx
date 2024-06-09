@@ -1,5 +1,4 @@
 import * as React from "react";
-
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Button, Menu, MenuItem } from "@mui/material";
@@ -15,12 +14,21 @@ interface HeaderProps {
 export default function Header(props: HeaderProps) {
   const { sections, title } = props;
   const [anchorEl, setAnchorEl] = React.useState<null | HTMLElement>(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event: React.MouseEvent<HTMLButtonElement>) => {
+  const [activeSectionIndex, setActiveSectionIndex] = React.useState<
+    number | null
+  >(null);
+
+  const handleClick = (
+    event: React.MouseEvent<HTMLButtonElement>,
+    index: number
+  ) => {
     setAnchorEl(event.currentTarget);
+    setActiveSectionIndex(index);
   };
+
   const handleClose = () => {
     setAnchorEl(null);
+    setActiveSectionIndex(null);
   };
 
   return (
@@ -46,7 +54,6 @@ export default function Header(props: HeaderProps) {
           <React.Fragment key={index}>
             <Button
               color="inherit"
-              key={index}
               variant="contained"
               sx={{
                 p: 1,
