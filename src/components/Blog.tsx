@@ -8,7 +8,10 @@ import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 import Carossel from "./Carossel";
 
-const sections = [
+type Section = {
+  title: string;
+  items: { title: string; url: string }[];
+};
   {
     title: "Transport",
     items: [
