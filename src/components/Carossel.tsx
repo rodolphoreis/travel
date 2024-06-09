@@ -25,7 +25,7 @@ const items = [
 
 function Carossel() {
   return (
-    <div style={{ minHeight: "400px" }}>
+    <div className="carossel">
       <Carousel>
         {items.map((item, i) => {
           console.log({ item: item });
