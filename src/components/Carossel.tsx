@@ -1,4 +1,5 @@
 import Carousel from "react-material-ui-carousel";
+import "./carossel.css";
 
 const items = [
   {
