@@ -1,5 +1,5 @@
 @media (max-width: 500px) {
-  .button {
-    margin-left: 10px;
+  nav {
+    gap: 10px;
   }
 }
