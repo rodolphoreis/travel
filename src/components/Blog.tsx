@@ -12,10 +12,81 @@ type Section = {
   title: string;
   items: { title: string; url: string }[];
 };
+
+const sections: Section[] = [
   {
     title: "Transport",
     items: [
-      { title: "Transporte de dentro", url: "https://tfl.gov.uk/modes/tube/" },
+      { title: "Transport for London", url: "https://tfl.gov.uk/" },
+      { title: "London Transport Museum", url: "https://www.ltmuseum.co.uk/" },
+      { title: "Tube Services", url: "https://tfl.gov.uk/modes/tube/" },
+    ],
+  },
+  {
+    title: "Restaurants",
+    items: [
+      { title: "The Ivy", url: "https://the-ivy.co.uk/" },
+      { title: "Dishoom", url: "https://www.dishoom.com/" },
+      { title: "Sketch", url: "https://sketch.london/" },
+    ],
+  },
+  {
+    title: "Attractions",
+    items: [
+      { title: "London Eye", url: "https://www.londoneye.com/" },
+      { title: "British Museum", url: "https://www.britishmuseum.org/" },
+      {
+        title: "Tower of London",
+        url: "https://www.hrp.org.uk/tower-of-london/",
+      },
+      { title: "The Shard", url: "https://www.the-shard.com/" },
+      { title: "Madame Tussauds", url: "https://www.madametussauds.com/" },
+    ],
+  },
+  {
+    title: "Parks",
+    items: [
+      {
+        title: "Hyde Park",
+        url: "https://www.royalparks.org.uk/parks/hyde-park",
+      },
+      {
+        title: "Regent's Park",
+        url: "https://www.royalparks.org.uk/parks/the-regents-park",
+      },
+      {
+        title: "Richmond Park",
+        url: "https://www.royalparks.org.uk/parks/richmond-park",
+      },
+    ],
+  },
+  {
+    title: "Futebol",
+    items: [
+      { title: "Premier League", url: "https://www.premierleague.com/" },
+      { title: "Arsenal FC", url: "https://www.arsenal.com/" },
+      { title: "Chelsea FC", url: "https://www.chelseafc.com/" },
+      { title: "Tottenham Hotspur", url: "https://www.tottenhamhotspur.com/" },
+      { title: "West Ham United", url: "https://www.whufc.com/" },
+    ],
+  },
+  {
+    title: "Museums",
+    items: [
+      { title: "Natural History Museum", url: "https://www.nhm.ac.uk/" },
+      { title: "Science Museum", url: "https://www.sciencemuseum.org.uk/" },
+      { title: "Victoria and Albert Museum", url: "https://www.vam.ac.uk/" },
+    ],
+  },
+  {
+    title: "Theaters",
+    items: [
+      { title: "Royal Opera House", url: "https://www.roh.org.uk/" },
+      {
+        title: "Shakespeare's Globe",
+        url: "https://www.shakespearesglobe.com/",
+      },
+      { title: "National Theatre", url: "https://www.nationaltheatre.org.uk/" },
     ],
   },
   // { title: "Sky Garden", url: "https://skygarden.london/" },
