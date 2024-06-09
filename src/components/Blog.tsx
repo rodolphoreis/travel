@@ -89,18 +89,6 @@ const sections: Section[] = [
       { title: "National Theatre", url: "https://www.nationaltheatre.org.uk/" },
     ],
   },
-  // { title: "Sky Garden", url: "https://skygarden.london/" },
-  // { title: "Five Guys", url: "https://fiveguys.co.uk/" },
-  // {
-  //   title: "London Tickets",
-  //   url: "https://www.london-tickets.co.uk/?gad_source=1&gclid=Cj0KCQjwu8uyBhC6ARIsAKwBGpQlR5vDEzBhNJdx2HCrpmnXNOJ-faqg2gTyyMzmzC2d8aAq5NUaETwaAuFLEALw_wcB",
-  // },
-  // {
-  //   title: "Buckingham Palace",
-  //   url: "https://www.rct.uk/visit/buckingham-palace",
-  // },
-  // { title: "Premier League", url: "https://www.premierleague.com/" },
-  // { title: "Science Museum", url: "https://www.sciencemuseum.org.uk/home" },
 ];
 
 const featuredPosts = [
