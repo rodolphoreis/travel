@@ -2,7 +2,7 @@ import * as React from "react";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Button, Menu, MenuItem } from "@mui/material";
-
+import "./header.css";
 interface HeaderProps {
   sections: ReadonlyArray<{
     title: string;
@@ -53,6 +53,7 @@ export default function Header(props: HeaderProps) {
         {sections.map((section, index) => (
           <React.Fragment key={index}>
             <Button
+              className="button"
               color="inherit"
               variant="contained"
               sx={{
