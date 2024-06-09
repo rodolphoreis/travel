@@ -105,7 +105,7 @@ const featuredPosts = [
     title: "Picadilly Circus",
     date: "",
     description:
-      "Piccadilly Circus is a very famous place in London, it has many famous shops and restaurants. I like visiting the bigger stores, the last time I visited the Harry Potter store, we loved it. There are many street`s artists. Bring plenty of cash. (laughter)",
+      "Piccadilly Circus is a very famous place in London, it has many famous shops and restaurants. I like visiting the bigger stores, the last time I visited the Harry Potter store, we loved it. There are many street`s artists. Bring plenty of cash.",
     image:
       "https://images.pexels.com/photos/14195029/pexels-photo-14195029.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2",
     imageLabel: "Image Text",
